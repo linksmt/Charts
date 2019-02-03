@@ -224,17 +224,17 @@ open class PieRadarChartViewBase: ChartViewBase
         legendBottom += self.extraBottomOffset
         legendLeft += self.extraLeftOffset
         
-        var minOffset = self.minOffset
+        let minOffset = self.minOffset
         
-        if self is RadarChartView
-        {
-            let x = self.xAxis
-            
-            if x.isEnabled && x.drawLabelsEnabled
-            {
-                minOffset = max(minOffset, x.labelRotatedWidth)
-            }
-        }
+//        if self is RadarChartView
+//        {
+//            let x = self.xAxis
+//            
+//            if x.isEnabled && x.drawLabelsEnabled
+//            {
+//                minOffset = max(minOffset, x.labelRotatedWidth)
+//            }
+//        }
 
         let offsetLeft = max(minOffset, legendLeft)
         let offsetTop = max(minOffset, legendTop)
