@@ -52,6 +52,18 @@ open class ChartViewBase: NSUIView, ChartDataProvider, AnimatorDelegate
         return _xAxis
     }
     
+    override open var bounds: CGRect {
+        didSet {
+            self.updateSize()
+        }
+    }
+    
+    override open var frame: CGRect {
+        didSet {
+            self.updateSize()
+        }
+    }
+    
     /// The default IValueFormatter that has been determined by the chart considering the provided minimum and maximum values.
     internal var _defaultValueFormatter: IValueFormatter? = DefaultValueFormatter(decimals: 0)
     
@@ -164,8 +176,8 @@ open class ChartViewBase: NSUIView, ChartDataProvider, AnimatorDelegate
     
     deinit
     {
-        self.removeObserver(self, forKeyPath: "bounds")
-        self.removeObserver(self, forKeyPath: "frame")
+//        self.removeObserver(self, forKeyPath: "bounds")
+//        self.removeObserver(self, forKeyPath: "frame")
     }
     
     internal func initialize()
@@ -186,8 +198,8 @@ open class ChartViewBase: NSUIView, ChartDataProvider, AnimatorDelegate
         
         _xAxis = XAxis()
         
-        self.addObserver(self, forKeyPath: "bounds", options: .new, context: nil)
-        self.addObserver(self, forKeyPath: "frame", options: .new, context: nil)
+//        self.addObserver(self, forKeyPath: "bounds", options: .new, context: nil)
+//        self.addObserver(self, forKeyPath: "frame", options: .new, context: nil)
     }
     
     // MARK: - ChartViewBase
@@ -893,10 +905,12 @@ open class ChartViewBase: NSUIView, ChartDataProvider, AnimatorDelegate
     
     internal var _viewportJobs = [ViewPortJob]()
     
-    open override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?)
-    {
-        if keyPath == "bounds" || keyPath == "frame"
-        {
+//    open override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?)
+//    {
+//        if keyPath == "bounds" || keyPath == "frame"
+//        {
+    private func updateSize() {
+        
             let bounds = self.bounds
             
             if (_viewPortHandler !== nil &&
@@ -916,8 +930,9 @@ open class ChartViewBase: NSUIView, ChartDataProvider, AnimatorDelegate
                     job.doJob()
                 }
             }
-        }
     }
+//        }
+//    }
     
     @objc open func removeViewportJob(_ job: ViewPortJob)
     {
