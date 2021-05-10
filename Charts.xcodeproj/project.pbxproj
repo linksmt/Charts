@@ -97,6 +97,19 @@
 		F100D68395F169B93590FA96 /* HorizontalBarChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539382766378B702660FDFB2 /* HorizontalBarChartRenderer.swift */; };
 		F37B07008B8AE7F3909FFB9C /* ChartDataRendererBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0216EDC6A1FE272F4EB19FCF /* ChartDataRendererBase.swift */; };
 		F5A209116FAC68F5903D0B46 /* ChartAnimationEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB762958EE8E6521563665D /* ChartAnimationEasing.swift */; };
+		F74473692649840600862602 /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0619A877C69A95ECCC440A44 /* LineChartView.swift */; };
+		F744736C2649842900862602 /* LineChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C978F31F23C7D21197DC2A1 /* LineChartData.swift */; };
+		F744736D2649842900862602 /* LineChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A75AA73C5AA381DA517959 /* LineChartDataSet.swift */; };
+		F744736E2649842900862602 /* ILineChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429E88F2729735DC092EE556 /* ILineChartDataSet.swift */; };
+		F744736F2649842900862602 /* LineChartDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFABD027DAF6851088F002AC /* LineChartDataProvider.swift */; };
+		F74473702649842900862602 /* LineChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DABDBBCCE6B3620C967F04A /* LineChartRenderer.swift */; };
+		F74473732649844800862602 /* LineRadarChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E31A4356CC6F283C29954B /* LineRadarChartDataSet.swift */; };
+		F74473762649846300862602 /* LineScatterCandleRadarChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58BD7B14BEA440783ED8D2B /* LineScatterCandleRadarChartDataSet.swift */; };
+		F74473792649847A00862602 /* ILineRadarChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7E6A99D82E6AE3804D5A39 /* ILineRadarChartDataSet.swift */; };
+		F744737C2649849000862602 /* IFillFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818AC6B12505B7C0A53D62F9 /* IFillFormatter.swift */; };
+		F744737F264984B000862602 /* DefaultFillFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C1BEFDF17404666C7B6054 /* DefaultFillFormatter.swift */; };
+		F7447382264984CB00862602 /* LineRadarRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FFC9D3773A9C7A60A897F /* LineRadarRenderer.swift */; };
+		F7447385264984DC00862602 /* LineScatterCandleRadarRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923206233CA89FD03565FF87 /* LineScatterCandleRadarRenderer.swift */; };
 		FAAD9FF6565DED2652188584 /* IPieChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2AA6CC89F809DCCD7605B4 /* IPieChartDataSet.swift */; };
 		FD37AAC0270F390FFC470A65 /* ChartDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B73FCEDD3841E7B958F6A9 /* ChartDataProvider.swift */; };
 		FDBDAFA7A5337C6E3992DACE /* ComponentBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C9A105A7DB64F39DDA648B /* ComponentBase.swift */; };
@@ -696,6 +709,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 865A1CF149F52850CAB7F177;
@@ -762,6 +776,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7447385264984DC00862602 /* LineScatterCandleRadarRenderer.swift in Sources */,
+				F7447382264984CB00862602 /* LineRadarRenderer.swift in Sources */,
+				F744737F264984B000862602 /* DefaultFillFormatter.swift in Sources */,
+				F744737C2649849000862602 /* IFillFormatter.swift in Sources */,
+				F74473792649847A00862602 /* ILineRadarChartDataSet.swift in Sources */,
+				F74473762649846300862602 /* LineScatterCandleRadarChartDataSet.swift in Sources */,
+				F74473732649844800862602 /* LineRadarChartDataSet.swift in Sources */,
+				F744736C2649842900862602 /* LineChartData.swift in Sources */,
+				F744736D2649842900862602 /* LineChartDataSet.swift in Sources */,
+				F744736E2649842900862602 /* ILineChartDataSet.swift in Sources */,
+				F744736F2649842900862602 /* LineChartDataProvider.swift in Sources */,
+				F74473702649842900862602 /* LineChartRenderer.swift in Sources */,
+				F74473692649840600862602 /* LineChartView.swift in Sources */,
 				D819331DA581C7E0AC5F8CEF /* Animator.swift in Sources */,
 				F5A209116FAC68F5903D0B46 /* ChartAnimationEasing.swift in Sources */,
 				D29BBEF55C9CC90114919CD2 /* BarChartView.swift in Sources */,
